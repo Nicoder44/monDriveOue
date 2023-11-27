@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>M&eacute;mo - Apprentissage Profond avec PyTorch</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="mémo---apprentissage-profond-avec-pytorch">Mémo - Apprentissage Profond avec PyTorch</h1>
+<h2 id="partie-1-les-réseaux-de-neurones">Partie 1: Les réseaux de neurones</h2>
+<h3 id="fondamentaux-des-réseaux-de-neurones">Fondamentaux des réseaux de neurones</h3>
+<h4 id="neurone-artificiel">Neurone Artificiel</h4>
+<ul>
+<li>Un neurone artificiel reçoit des entrées pondérées, applique une fonction d'activation, et produit une sortie.</li>
+<li>La fonction d'activation introduit une non-linéarité, permettant au réseau de modéliser des relations complexes.</li>
+</ul>
+<h4 id="fonctionnement-du-réseau">Fonctionnement du réseau</h4>
+<ul>
+<li>Propagation avant (forward): Les données passent à travers le réseau de la couche d'entrée à la couche de sortie.</li>
+<li>Rétropropagation (backward): Les gradients sont calculés par rapport à l'erreur, et les poids sont ajustés pour minimiser l'erreur.</li>
+</ul>
+<h3 id="un-premier-réseau-de-neurones-simple">Un premier réseau de neurones simple</h3>
+<h4 id="descente-de-gradient">Descente de gradient</h4>
+<ul>
+<li>La descente de gradient est utilisée pour minimiser la fonction de perte en ajustant les poids du réseau.</li>
+<li>Taux d'apprentissage: Il contrôle la taille des pas dans la direction opposée au gradient. Trop petit peut ralentir la convergence, trop grand peut provoquer une divergence.</li>
+</ul>
+<h4 id="mini-batch">Mini-batch</h4>
+<ul>
+<li>L'entraînement sur des mini-lots (mini-batch) accélère le processus d'optimisation tout en évitant le surajustement.</li>
+</ul>
+<h2 id="partie-2-perceptron-multi-couches-pmc">Partie 2: Perceptron Multi-Couches (PMC)</h2>
+<h3 id="architecture-des-pmc">Architecture des PMC</h3>
+<ul>
+<li>Les PMC sont composés de plusieurs couches de neurones (entrée, cachée, sortie).</li>
+<li>Chaque connexion entre les neurones a un poids associé.</li>
+</ul>
+<h3 id="apprentissage-avec-pytorch">Apprentissage avec PyTorch</h3>
+<h4 id="tenseurs">Tenseurs</h4>
+<ul>
+<li>Les tenseurs sont la structure de données fondamentale en PyTorch.</li>
+<li>Ils peuvent être scalaires, vecteurs, matrices, etc.</li>
+</ul>
+<h4 id="module-torchnn">Module <code>torch.nn</code></h4>
+<ul>
+<li>Ce module fournit les éléments de base pour construire des modèles en PyTorch.</li>
+<li><code>nn.Module</code>: Classe de base pour tous les modules PyTorch.</li>
+<li><code>nn.Linear</code>: Couche linéaire pour les transformations linéaires (équivalent d'une couche dense).</li>
+</ul>
+<h4 id="fonction-dactivation">Fonction d'activation</h4>
+<ul>
+<li>La fonction d'activation introduit une non-linéarité dans le réseau. Exemples: ReLU, Sigmoid, Tanh.</li>
+</ul>
+<h3 id="prise-en-main-de-pytorch">Prise en main de PyTorch</h3>
+<h4 id="création-dun-modèle">Création d'un modèle</h4>
+<ul>
+<li>Définir une classe héritant de <code>nn.Module</code>.</li>
+<li>Définir les couches du modèle dans la méthode <code>__init__</code>.</li>
+<li>Implémenter la propagation avant dans la méthode <code>forward</code>.</li>
+</ul>
+<h4 id="entraînement-du-modèle">Entraînement du modèle</h4>
+<ul>
+<li>Initialiser un optimiseur (ex: <code>torch.optim.SGD</code>).</li>
+<li>Définir une fonction de perte (ex: MSE pour la régression).</li>
+<li>Boucle d'entraînement: Propagation avant, calcul de la perte, rétropropagation, mise à jour des poids.</li>
+</ul>
+<h4 id="validation-et-évaluation">Validation et évaluation</h4>
+<ul>
+<li>Évaluer le modèle sur des données de validation.</li>
+<li>Utiliser des métriques appropriées (ex: MSE pour la régression).</li>
+</ul>
+<p>Bonne chance pour votre examen!</p>
+
+        
+        
+    </body>
+    </html>

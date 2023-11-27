@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>M&eacute;mo - Apprentissage par Renforcement</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="mémo---apprentissage-par-renforcement">Mémo - Apprentissage par Renforcement</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="définition">Définition</h3>
+<p>L'apprentissage par renforcement vise à enseigner à un agent à prendre des décisions dans un environnement incertain en utilisant des récompenses.</p>
+<h3 id="applications">Applications</h3>
+<ul>
+<li>Algorithmes de trading</li>
+<li>Robotique autonome</li>
+<li>Systèmes de recommandation</li>
+</ul>
+<h2 id="2-concepts-clés">2. Concepts clés</h2>
+<h3 id="agent-et-environnement">Agent et Environnement</h3>
+<ul>
+<li><strong>Agent :</strong> Prend des actions.</li>
+<li><strong>Environnement :</strong> Fournit des états, récompenses, et évolue selon les actions.</li>
+</ul>
+<h3 id="récompenses">Récompenses</h3>
+<ul>
+<li><strong>Récompense :</strong> Signal numérique indiquant la qualité d'une action dans un état.</li>
+</ul>
+<h3 id="politique">Politique</h3>
+<ul>
+<li><strong>Politique (π) :</strong> Stratégie de l'agent, déterminant quelle action prendre dans chaque état.</li>
+</ul>
+<h2 id="3-processus-de-décision-de-markov-mdp">3. Processus de Décision de Markov (MDP)</h2>
+<h3 id="mdp">MDP</h3>
+<ul>
+<li><strong>MDP :</strong> Modèle mathématique pour un processus de décision séquentiel.</li>
+</ul>
+<h3 id="formule-de-bellman">Formule de Bellman</h3>
+<p>[ Q(s, a) = R(s, a) + \gamma \max_{a'} Q(s', a') ]</p>
+<ul>
+<li>( Q(s, a) ) : Valeur de l'action ( a ) dans l'état ( s ).</li>
+<li>( R(s, a) ) : Récompense immédiate pour l'action ( a ) dans l'état ( s ).</li>
+<li>( \gamma ) : Facteur d'actualisation.</li>
+<li>( s' ) : Prochain état.</li>
+</ul>
+<h2 id="4-q-learning">4. Q-Learning</h2>
+<h3 id="q-table">Q-Table</h3>
+<ul>
+<li><strong>Q-Table :</strong> Tableau représentant les valeurs ( Q ) pour chaque paire état-action.</li>
+</ul>
+<h3 id="algorithme-q-learning">Algorithme Q-Learning</h3>
+<p>[ Q(s, a) \leftarrow (1 - \alpha)Q(s, a) + \alpha [R(s, a) + \gamma \max_{a'} Q(s', a')] ]</p>
+<ul>
+<li>( \alpha ) : Taux d'apprentissage.</li>
+</ul>
+<h2 id="5-exercices">5. Exercices</h2>
+<h3 id="exercice-1">Exercice 1</h3>
+<ol>
+<li>Exécutez le code &quot;FrozenLake&quot; fourni.</li>
+<li>Testez le comportement sur une case en essayant d'aller dans une direction spécifique.</li>
+<li>Codez un scénario gagnant et un scénario perdant.</li>
+</ol>
+<h3 id="exercice-3">Exercice 3</h3>
+<p>Calculez en Python la récompense cumulative pour différents scénarios.</p>
+<h3 id="exercice-5">Exercice 5</h3>
+<p>Implémentez le Q-learning dans le script fourni (<a href="http://Ex5Caneva.py">Ex5Caneva.py</a>) avec la formule de mise à jour.</p>
+
+        
+        
+    </body>
+    </html>
