@@ -8,10 +8,10 @@ def keypoints2numpyarray(kp):
         points_ref[i,:]=kp[i].pt
     return points_ref
 
-def create_K(dx, dy, N, M, dX, dY):
+def create_K(dX, dY, N, M, dx, dy, Z):
     # Calcul des focales en pixels
-    fx = (N / 2) * (dX / dx)
-    fy = (M / 2) * (dY / dy)
+    fx = (Z * dX / dx)
+    fy = (Z * dY / dy)
 
     # Calcul du centre de l'image dans le repère de l'image
     x0 = N / 2
@@ -24,6 +24,6 @@ def create_K(dx, dy, N, M, dX, dY):
 
     return K
 
-K = create_K(162, 110, 960, 540, 155, 105)
+K = create_K(243, 170, 960, 540, 155, 105, 500)
 
 print(K)
